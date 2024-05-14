@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { removeTask } from "@/actions/tasks-actions";
 
-export function TaskButtonDelete({ taskId }: { taskId: number }) {
+export function TaskButtonDelete({ taskId }: { taskId: string }) {
   return (
     <form action={removeTask}>
       <input type="hidden" name="taskId" value={taskId} />
