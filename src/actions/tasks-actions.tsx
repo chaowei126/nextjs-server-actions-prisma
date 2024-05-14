@@ -34,7 +34,7 @@ export async function removeTask(formData: FormData) {
 
   await prisma.task.delete({
     where: {
-      id: parseInt(taskId),
+      id: taskId,
     },
   });
 
@@ -53,7 +53,7 @@ export async function updateTask(formData: FormData) {
 
   await prisma.task.update({
     where: {
-      id: parseInt(id),
+      id: id,
     },
     data: {
       name: name,

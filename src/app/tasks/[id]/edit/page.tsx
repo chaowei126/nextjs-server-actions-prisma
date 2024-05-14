@@ -9,7 +9,7 @@ export default async function TaskPageEdit({params}: {
 }) {
   const task = await prisma.task.findFirst({
     where: {
-      id: parseInt(params.id)
+      id: params.id
     }
   })
 
